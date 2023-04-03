@@ -1,0 +1,16 @@
+footer {
+    height: 70px;
+    width: 100%;
+    background: #ffffff;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    position: fixed;
+    z-index: 3;
+    bottom: 0;
+
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+}

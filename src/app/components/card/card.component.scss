@@ -1,0 +1,123 @@
+.card {
+    min-height: 65px;
+
+    background: #ffffff;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+
+    padding: 0.8rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    transition: background 0.2s ease-in-out;
+}
+
+.card-front{
+    font-weight: 700;
+    flex-grow: 1;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-back{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.flipped-content{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+.flip-btn-container{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.flip-btn{
+    background: unset;
+    border: unset;
+
+    width: 30px;
+    height: 30px;
+    font-size: 1.3rem;
+}
+
+.card-answer{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-open{
+    min-height: 130px;
+    background-color: #FFFFD4;
+}
+
+.card-question{
+    font-size: 1.2rem;
+}
+
+.card-buttons{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.card-buttons button{
+    width: 85px;
+    height: 40px;
+    border: unset;
+    border-radius: 5px;
+    color: #fff;
+    font-family: inherit;
+
+    font-size: 0.8rem;
+}
+
+.failed {
+    background: #FF3030;
+}
+
+.zap{
+    background: #2FBE34;
+}
+
+.almost{
+    background: #FF922E;
+}
+
+
+.icon-container{
+    font-size: 1.25rem;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.answered{
+    color: #fff;
+}
+
+.answer-zap{
+    background: #2FBE34;
+}
+
+.answer-almost{
+    background: #FF922E;
+}
+
+.answer-failed{
+    background: #FF3030;
+}

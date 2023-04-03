@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root{
+    --bg-color: #FB6B6B;
+
+    font-size: 16px;
+}
+
+/* CSS reset*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}

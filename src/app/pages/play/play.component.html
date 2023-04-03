@@ -1,0 +1,15 @@
+<app-game-header></app-game-header>
+
+<main class="game-container">
+    <div class="cards-container">
+
+        <!-- pra comunicação de filho pra pai, eu preciso definir um novo tipo de vento dentro do componente filho. Toda vez que o evento for disparado, uma função do componente pai é executada. No caso, estou fazendo isso com o evento answerEvent, que fiz bind da função addAnswer -->
+        <app-card
+            (answerEvent)="addAnswer($event)"
+            *ngFor="let card of cards; index as i" [indice]="i"
+            [cardContent]="card"
+        >
+        </app-card>
+    </div>
+</main>
+<app-game-footer [answers]="cardsAnswers"></app-game-footer>

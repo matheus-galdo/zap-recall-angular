@@ -1,0 +1,34 @@
+<div class="card" [ngClass]="isOpen ? 'card-open' : ''">
+
+    <div class="card-front" (click)="openCard()" *ngIf="!isOpen">
+        Pergunta {{indice + 1}}
+
+        <div [ngSwitch]="answer" class="icon-container" [ngClass]="answer !== '' ? 'answered answer-' + answer: ''">
+            <ion-icon name="checkmark-outline" *ngSwitchCase="'zap'"></ion-icon>
+            <ion-icon name="help-outline" *ngSwitchCase="'almost'"></ion-icon>
+            <ion-icon name="close-outline" *ngSwitchCase="'failed'"></ion-icon>
+            <ion-icon name="play-outline" *ngSwitchDefault></ion-icon>
+        </div>
+    </div>
+
+    <div class="card-back" *ngIf="isOpen">
+        <div *ngIf="!isFlipped" class="flipped-content">
+            <p class="card-question">{{cardContent.question}}</p>
+
+            <div class="flip-btn-container">
+                <button (click)="flipCard()" aria-label="flip" class="flip-btn">
+                    <ion-icon name="refresh-outline"></ion-icon>
+                </button>
+            </div>
+        </div>
+
+        <div class="card-answer" *ngIf="isFlipped">
+            <p class="card-question">{{cardContent.answer}}</p>
+            <div class="card-buttons">
+                <button class="failed" (click)="answerCard('failed')">Não lembrei</button>
+                <button class="almost" (click)="answerCard('almost')">Quase não lembrei</button>
+                <button class="zap" (click)="answerCard('zap')">Zap</button>
+            </div>
+        </div>
+    </div>
+</div>
