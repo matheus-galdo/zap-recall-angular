@@ -1,0 +1,25 @@
+.icon-container{
+    font-size: 1.25rem;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.answered{
+    color: #fff;
+}
+
+.answer-zap{
+    background: #2FBE34;
+}
+
+.answer-almost{
+    background: #FF922E;
+}
+
+.answer-failed{
+    background: #FF3030;
+}

@@ -1,0 +1,5 @@
+<div *ngIf="answer !== ''" [ngSwitch]="answer" class="icon-container" [ngClass]="answer !== '' ? 'answered answer-' + answer: ''">
+    <ion-icon name="checkmark-outline" *ngSwitchCase="'zap'"></ion-icon>
+    <ion-icon name="help-outline" *ngSwitchCase="'almost'"></ion-icon>
+    <ion-icon name="close-outline" *ngSwitchCase="'failed'"></ion-icon>
+</div>

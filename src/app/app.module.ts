@@ -8,6 +8,7 @@ import { PlayComponent } from './pages/play/play.component';
 import { CardComponent } from './components/card/card.component';
 import { GameFooterComponent } from './components/footer/game-footer.component';
 import { GameHeaderComponent } from './components/game-header/game-header.component';
+import { CardIconComponent } from './components/card-icon/card-icon.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { GameHeaderComponent } from './components/game-header/game-header.compon
     PlayComponent,
     CardComponent,
     GameFooterComponent,
-    GameHeaderComponent
+    GameHeaderComponent,
+    CardIconComponent
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,10 @@ import { CardAnswer } from 'src/app/pages/play/play.component';
 export class GameFooterComponent implements OnInit {
 
   @Input() answers: CardAnswer[] = [];
+  @Input() totalCards: number = 0;
+  gameIsFinished = false;
+
+
 
   constructor() { }
 
@@ -16,7 +20,10 @@ export class GameFooterComponent implements OnInit {
   }
 
   //parecido com um useEffect, principalmente com o evento componentDidMount do life cicle do react
-  ngOnChanges(changes: SimpleChanges){
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['answers'].currentValue.length === this.totalCards) {
+      this.gameIsFinished = true;
+    }
     console.log('mudei', changes['answers']);
   }
 

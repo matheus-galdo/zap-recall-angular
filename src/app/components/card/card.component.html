@@ -3,12 +3,10 @@
     <div class="card-front" (click)="openCard()" *ngIf="!isOpen">
         Pergunta {{indice + 1}}
 
-        <div [ngSwitch]="answer" class="icon-container" [ngClass]="answer !== '' ? 'answered answer-' + answer: ''">
-            <ion-icon name="checkmark-outline" *ngSwitchCase="'zap'"></ion-icon>
-            <ion-icon name="help-outline" *ngSwitchCase="'almost'"></ion-icon>
-            <ion-icon name="close-outline" *ngSwitchCase="'failed'"></ion-icon>
-            <ion-icon name="play-outline" *ngSwitchDefault></ion-icon>
+        <div *ngIf="answer === ''" class="icon-container">
+            <ion-icon name="play-outline"></ion-icon>
         </div>
+        <app-card-icon *ngIf="answer !== ''" [answer]="answer"></app-card-icon>
     </div>
 
     <div class="card-back" *ngIf="isOpen">

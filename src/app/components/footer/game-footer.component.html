@@ -1,3 +1,13 @@
 <footer>
-    <p *ngFor="let answer of answers">{{answer.type}}</p>
+    <div class="finished-container" *ngIf="gameIsFinished">
+        <p>Parabéns</p>
+    </div>
+    
+    <p class="cards-counter">
+        {{answers.length}}/{{totalCards}} CONCLUÍDOS
+    </p>
+
+    <div class="plays-container">
+        <app-card-icon *ngFor="let answer of answers" [answer]="answer.type"></app-card-icon>
+    </div>
 </footer>
